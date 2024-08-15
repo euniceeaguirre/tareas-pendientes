@@ -5,7 +5,7 @@ const fecha = document.querySelector('#fecha');
 const lista = document.querySelector('#lista');
 const elemento = document.querySelector('#elemento');
 const input = document.querySelector('#input');
-const botonAgregar = document.querySelector('#agregar-tarea');
+const botonAgregar = document.querySelector('#botonAgregar');
 const check = 'bi-record-circle';
 const tachado = 'tachado';
 const uncheck = 'bi-circle';
@@ -31,11 +31,12 @@ function agregarTarea(tarea, id, hecho , eliminar) {
     const LINE = hecho ? tachado : '';
     const elemento = `    <li id="elemento">
     <i id="${id}" data="hecho" class="bi ${realizado}"></i>
-    <p class="tarea-lista text ${LINE}">${tarea} 1</p>
+    <p class="tarea-lista text ${LINE}">${tarea} </p>
     <i id="${id}" data="eliminar" class="bi bi-x-circle"></i>
 </li>  `
  lista.insertAdjacentHTML("beforeend", elemento);
 };
+
 function tareaRealizada(element) {
 
     element.classList.toggle(check);
